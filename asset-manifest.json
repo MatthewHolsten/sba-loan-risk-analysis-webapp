@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sba-loan-risk-analysis-webapp/static/css/main.073c9b0a.css",
+    "main.js": "/sba-loan-risk-analysis-webapp/static/js/main.e48460ec.js",
+    "index.html": "/sba-loan-risk-analysis-webapp/index.html",
+    "main.073c9b0a.css.map": "/sba-loan-risk-analysis-webapp/static/css/main.073c9b0a.css.map",
+    "main.e48460ec.js.map": "/sba-loan-risk-analysis-webapp/static/js/main.e48460ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.e48460ec.js"
+  ]
+}
