@@ -108,8 +108,9 @@ function Form() {
     return (
         <div className="Form">
             <h2 className="title"> <b>
-            &nbsp;
-            SBA Loan Analysis Tool
+
+            &nbsp;US Small Business Admin.<br />
+            &nbsp;&nbsp;&nbsp;Loan Risk Analysis Tool
             </b></h2>
 
             <h5>
@@ -118,14 +119,19 @@ function Form() {
             Tufts University, Spring 2022
             <br />
 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for CS-135: Intro to Machine Learning
+            &nbsp;&nbsp;&nbsp;&nbsp; for CS-135: Intro to Machine Learning
             <br />
 
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            by <a href="https://github.com/MatthewHolsten">Matt Holsten</a> ('24), <a href="https://github.com/rpitkin19">Rob Pitkin</a> ('23)
+            &nbsp;&nbsp;&nbsp;
+            by <a href="https://github.com/MatthewHolsten">Matt Holsten</a> ('24) & <a href="https://github.com/rpitkin19">Rob Pitkin</a> ('23)
+            <br />
             <br />
 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check out this project's <a href="https://github.com/MatthewHolsten/sba-loan-risk-analysis">GitHub</a>!
+
+            &nbsp;&nbsp;App is built w/ our SBA Loan Neural Net <a href="https://matthewholsten.pythonanywhere.com/">API</a>
+            <br />
+
+            &nbsp;&nbsp;Check out this project's <a href="https://github.com/MatthewHolsten/sba-loan-risk-analysis">GitHub</a> for details!
             <br />
 
             </h5>
@@ -138,7 +144,7 @@ function Form() {
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <label>
-                    &nbsp;
+                    &nbsp;&nbsp;
                     Lender Loan
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="text" id="loan_amt" {...register("loan_amt")} placeholder="US Dollars (ex: 10000)"/>
@@ -146,7 +152,7 @@ function Form() {
                     <br /><br />
 
                     <label>
-                    &nbsp;
+                    &nbsp;&nbsp;
                     SBA Guaranty
                     &nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <input type="text" id="sba_loan_amt" {...register("sba_loan_amt")} placeholder="US Dollars (ex: 5000)"/>
@@ -155,14 +161,15 @@ function Form() {
 
 
                     <label>
-                    &nbsp;
+                    &nbsp;&nbsp;
                     Guaranty %
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="text" id="sba_prop" {...register("sba_prop")} placeholder="Decimal (ex: 0.5)"/>
                     </label>
                     <br /><br />
 
-                    <label>&nbsp;
+                    <label>
+                    &nbsp;&nbsp;
                     Term Length
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="text" id="term" {...register("term")} placeholder="Months (ex: 120)"/>
@@ -170,7 +177,7 @@ function Form() {
                     <br /><br />
 
                     <label>
-                    &nbsp;
+                    &nbsp;&nbsp;
                     Jobs Retained
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="text" id="jobs" {...register("jobs")} placeholder="Total (ex: 100)"/>
@@ -178,20 +185,22 @@ function Form() {
                     <br /><br />
 
                     <label>
-                    &nbsp;
+                    &nbsp;&nbsp;
                     Industry Code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="text" id="ind_code" {...register("ind_code")} placeholder="ID Number (ex: 42)"/>
                     </label>
                     <br /><br />
 
-                    <label>&nbsp;
+                    <label>
+                    &nbsp;&nbsp;
                     State
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <input type="text" id="state" {...register("state")} placeholder="Abbreviation (ex: VA)"/>
                         </label>
                     <br /><br />
 
-                    <label>&nbsp;
+                    <label>
+                    &nbsp;&nbsp;
                     Trained Model
                     &nbsp;&nbsp;&nbsp;&nbsp;
                         <input type="text" value="Country" id="model" {...register("model")} placeholder="State Abbrev or 'Country' " readOnly/>
@@ -199,7 +208,7 @@ function Form() {
                     <br /><br />
 
                     <label>
-                    &nbsp;
+                    &nbsp;&nbsp;
                     Admin. Party
                     &nbsp; </label>
                         <label>
@@ -214,7 +223,7 @@ function Form() {
                     <br /><br />
 
                     <label>
-                    &nbsp;
+                    &nbsp;&nbsp;
                     Pop. Density
                         &nbsp; </label>
                         <label>
@@ -235,7 +244,7 @@ function Form() {
                     <br /><br />
 
                     <label>
-                    &nbsp;
+                    &nbsp;&nbsp;
                     Time Period
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     </label>
@@ -247,26 +256,23 @@ function Form() {
 
                     <br /><br />
 
-                    &nbsp;
+                    &nbsp;&nbsp;
 
                     <input type="reset"/>
 
 
-                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                     <button onClick={populateRandom}>Generate Random</button>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="submit" id="submit"/>&nbsp;&nbsp;
-
-
-
 
                 </form>
 
             </div>
             </div>
             <br /><br />
-            <b>&nbsp;Model Prediction:&nbsp;&nbsp; </b>
+            <b>&nbsp;&nbsp;Model Prediction:&nbsp;&nbsp; </b>
             <em><QueryAPI query_url={url}/></em>
             <br /><br /><br /><br />
             <br /><br /><br /><br />
